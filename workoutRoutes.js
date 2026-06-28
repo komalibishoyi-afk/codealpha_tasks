@@ -1,0 +1,1 @@
+const r=require('express').Router();const c=require('../controllers/workoutController');const {protect}=require('../middleware/authMiddleware');r.get('/',protect,c.getWorkouts);r.post('/',protect,c.addWorkout);module.exports=r;

@@ -1,0 +1,1 @@
+const r=require('express').Router();const c=require('../controllers/goalController');const {protect}=require('../middleware/authMiddleware');r.get('/',protect,c.getGoals);r.post('/',protect,c.createGoal);module.exports=r;
